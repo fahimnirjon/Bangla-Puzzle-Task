@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Green Leaf Café | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body class="bg-gray-100">
+
+    <nav class="w-full fixed top-0 left-0 z-600 bg-gray-800 p-4 text-white flex justify-between items-center">
+        <button class="text-lg font-bold hover:text-green-400">The Green Leaf Café</button>
+        <ul class="flex space-x-4">
+          <li><button class="hover:text-gray-400">Home</button></li>
+          <li><button class="hover:text-gray-400">Menu</button></li>
+          <li><button class="hover:text-gray-400">About Us</button></li>
+          <li><button class="hover:text-gray-400">Reservations</button></li>
+          <li><button class="hover:text-gray-400">Order Online</button></li>
+        </ul>
+        <div>
+          <button id="cart-button" class="relative bg-green-500 px-3 py-1 rounded hover:bg-green-600">
+            Cart <span id="cart-count" class="absolute top-0 right-0 bg-red-500 text-xs px-1 rounded-full">0</span>
+          </button>
+        </div>
+      </nav>
+      
+
+    <div>
+        <p class="text-center font-bold text-3xl mb-5 mt-20">Food Items</p>
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-center gap-6">
+            <!-- Food Item Card: Burger -->
+            <div class="food-item m-4 p-4 border rounded shadow bg-white">
+                <img src="images/pablo-merchan-montes-hyIE90CN6b0-unsplash.jpg" alt="Burger" class="w-full h-80 object-cover rounded">
+                <h3 class="text-lg font-semibold">Burger</h3>
+                <p class="text-gray-600">$5.00</p>
+                <button class="add-to-cart bg-green-500 text-white p-2 rounded mt-2">Add to Cart</button>
+            </div>
+            
+            <!-- Food Item Card: Pizza -->
+            <div class="food-item m-4 p-4 border rounded shadow bg-white">
+                <img src="images/bruna-branco-t8hTmte4O_g-unsplash.jpg" alt="Pizza" class="w-full h-80 object-cover rounded">
+                <h3 class="text-lg font-semibold">Pasta</h3>
+                <p class="text-gray-600">$8.00</p>
+                <button class="add-to-cart bg-green-500 text-white p-2 rounded mt-2">Add to Cart</button>
+            </div>
+        
+            <!-- Food Item Card: Pasta -->
+            <div class="food-item m-4 p-4 border rounded shadow bg-white">
+                <img src="images/alexander-mils-aiIANaSK9DQ-unsplash.jpg" alt="Pasta" class="w-full h-80 object-cover rounded">
+                <h3 class="text-lg font-semibold">Dessert</h3>
+                <p class="text-gray-600">$7.00</p>
+                <button class="add-to-cart bg-green-500 text-white p-2 rounded mt-2">Add to Cart</button>
+            </div>
+        
+            <!-- Food Item Card: Salad -->
+            <div class="food-item m-4 p-4 border rounded shadow bg-white">
+                <img src="images/pinar-kucuk-Ae7jQFDTPk4-unsplash.jpg" alt="Salad" class="w-full h-80 object-cover rounded">
+                <h3 class="text-lg font-semibold">Pizza</h3>
+                <p class="text-gray-600">$4.50</p>
+                <button class="add-to-cart bg-green-500 text-white p-2 rounded mt-2">Add to Cart</button>
+            </div>
+        
+            <!-- Food Item Card: Sushi -->
+            <div class="food-item m-4 p-4 border rounded shadow bg-white">
+                <img src="images/derek-duran-Jz4QMhLvGgw-unsplash.jpg" alt="Sushi" class="w-full h-80 object-cover rounded">
+                <h3 class="text-lg font-semibold">Sushi</h3>
+                <p class="text-gray-600">$12.00</p>
+                <button class="add-to-cart bg-green-500 text-white p-2 rounded mt-2">Add to Cart</button>
+            </div>
+        
+            <!-- Food Item Card: Dessert -->
+            <div class="food-item m-4 p-4 border rounded shadow bg-white">
+                <img src="images/taylor-kiser-EvoIiaIVRzU-unsplash.jpg" alt="Dessert" class="w-full h-80 object-cover rounded">
+                <h3 class="text-lg font-semibold">Salaad</h3>
+                <p class="text-gray-600">$3.50</p>
+                <button class="add-to-cart bg-green-500 text-white p-2 rounded mt-2">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="cart-sidebar" class="fixed right-0 top-0 h-full w-72 bg-white shadow-lg transform translate-x-full transition-transform duration-300">
+        <div class="flex justify-between p-4 border-b">
+            <h2 class="text-lg font-semibold">Your Cart</h2>
+            <button id="close-sidebar" class="text-red-500 font-bold text-xl">X</button>
+        </div>
+        <div id="cart-items" class="p-5">
+            <!-- Cart items will be added here -->
+        </div>
+        <div id="total-revenue" class="p-4">
+            <strong>Total Revenue: $<span id="revenue-amount">0.00</span></strong>
+        </div>
+        <button class="bg-green-500 text-white font-semibold text-xl p-2 rounded-xl ml-16 mt-5">Place an order</button>
+    </div>
+    
+
+</body>
+</html>
